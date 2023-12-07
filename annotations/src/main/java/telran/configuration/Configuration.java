@@ -70,7 +70,7 @@ public class Configuration {
 		String propertyValue = null;
 		propertyValue = (defaultValue != null) ? properties.getProperty(propertyName, defaultValue)
 				: properties.getProperty(propertyName);
-		if (propertyValue == null) {
+		if (propertyValue == null && propertyName != null) {
 			throw new RuntimeException("Property value is null for propertyName: " + propertyName);
 		}
 
